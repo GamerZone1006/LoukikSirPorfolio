@@ -73,6 +73,7 @@
 
   .hero img:hover {
     transform: translateY(-10px);
+    box-shadow: 0 0 20px black;
   }
   .hero .icons {
     width: 20vw;
@@ -158,6 +159,92 @@
     transform: scale(1.1);
     color: #ffffff;
   }
+
+  .education {
+    padding: 50px;
+    background-color: #1C1C1C;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .education h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+  }
+
+  .education ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education li {
+    margin: 10px 20px;
+    font-size: 18px;
+    color: #E0E0E0;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .education p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+  }
+
+  .education li:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .education {
+      padding: 30px;
+    }
+
+    .education h2 {
+      font-size: 1.3rem;
+    }
+
+    .education ul {
+      flex-direction: column;
+      line-height: 1.5rem;
+    }
+
+    .education li {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .education p {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .education {
+      padding: 20px;
+    }
+
+    .education h2 {
+      font-size: 1.2rem;
+    }
+
+    .education li {
+      font-size: 14px;
+    }
+
+    .education p {
+      font-size: 0.75rem;
+    }
+  }
+
 
   .skills li::before {
     content: '';
@@ -325,8 +412,34 @@
           width: 90%;
       }
   }
-</style>
+  @media (max-width: 768px) {
+    .circs {
+      width: 40px;
+      height: 40px;
+    }
 
+    .circs svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .icons {
+      gap: 10px;
+    }
+
+    .circs {
+      width: 35px;
+      height: 35px;
+    }
+
+    .circs svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+</style>
 <body>
   <section class="hero">
     <div class="hero-content">
@@ -435,7 +548,25 @@
           </svg></i> English</li>
     </ul>
   </section>
-  <section id="portfolio" class="portfolio">
+
+  <section class="education">
+    <h2>Education</h2>
+    <ul>
+      <li>St. Francis Institute of Technology(2014-2017)
+        <ul>
+          <p>Bachelor's In Engineering, Electronics and Telecommunication</p>
+        </ul>
+      </li>
+      <li>Thakur College of Engineering and Technology(2017-2019)
+        <ul><p>Master of Engineering, Computer Engineering</p></ul>
+      </li>
+      <li>DY Patil University(2021)
+        <ul><p>Phd, Computer Engineering</p></ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- <section id="portfolio" class="portfolio">
     <h2>Projects</h2>
     <div class="work-gallery">
       <div class="work-item">
@@ -460,10 +591,9 @@
         <p>Description .</p>
       </div>
     </div>
-  </section>
+  </section> -->
   <footer>
-    <p>&copy; 2024 Loukik Salvi. All rights reserved.</p>
+    <p>&copy; All rights reserved.</p>
   </footer>
 </body>
-
 </html>
